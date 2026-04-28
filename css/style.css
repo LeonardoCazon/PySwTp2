@@ -363,19 +363,9 @@ h4 {
 /* ==========================================
    CSS SPRITE ICONS
    ========================================== */
-/*
-   INSTRUCCIONES PARA LA IMAGEN SPRITE:
-   1. Crea una única imagen (ej. 'icons-sprite.png') que contenga todos tus iconos.
-   2. Coloca esta imagen en la carpeta 'img/' de tu proyecto.
-   3. Ajusta la ruta en 'background-image' si tu imagen está en otra ubicación.
-   4. Para cada clase de icono (ej. .icon-facebook-sprite), define:
-      - 'width' y 'height': Las dimensiones exactas de ese icono dentro de tu sprite.
-      - 'background-position': Las coordenadas X e Y donde comienza ese icono en tu sprite.
-        (0 0 para el primer icono, -WIDTH 0 para el segundo si están en fila, etc.)
-*/
 .sprite-icon {
     display: inline-block;
-    background-image: url('../img/iconos\ imagen\ sprite.jpg');
+    background-image: url('../img/iconos-imagen-sprite.jpg');
     background-repeat: no-repeat;
     vertical-align: middle; /* Ayuda a alinear el icono con el texto */
     /* Si tu sprite es de alta resolución y quieres escalar los iconos, usa background-size: */
