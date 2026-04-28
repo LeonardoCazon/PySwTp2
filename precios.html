@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - Comparador de Destinos</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/precios.css">
+</head>
+<body>
+
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Viajes PySwing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destinos.html">Todos los destinos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="destinos.html">Europa</a></li>
+                            <li><a class="dropdown-item" href="destinos.html">América</a></li>
+                            <li><a class="dropdown-item" href="destinos.html">Asia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="precios.html">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="blog.html" class="btn btn-primary btn-sm rounded-pill px-3">📰 Blog</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button id="dark-mode-toggle" class="btn btn-outline-light btn-sm rounded-circle">🌓</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1>Comparador de Precios</h1>
+            <p class="lead">Encuentra el mejor precio para tus destinos favoritos</p>
+        </div>
+
+        <!-- TABLA DE PRECIOS -->
+        <div class="table-responsive shadow rounded-4 overflow-hidden mb-5">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="ps-4">Servicio</th>
+                        <th class="text-center" data-bs-toggle="tooltip" title="Madrid - Capital española">🏛️ Madrid</th>
+                        <th class="text-center" data-bs-toggle="tooltip" title="Barcelona - Capital de Cataluña">🏖️ Barcelona</th>
+                        <th class="text-center" data-bs-toggle="tooltip" title="Valencia - Playas y paella">🥘 Valencia</th>
+                        <th class="text-center" data-bs-toggle="tooltip" title="Sevilla - Flamenco y tradición">💃 Sevilla</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- TRANSPORTE -->
+                    <tr class="table-light">
+                        <td colspan="5" class="fw-bold ps-4 text-primary">✈️ Transporte</td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4" data-bs-toggle="tooltip" title="Vuelo de ida y vuelta incluido">Vuelos</td>
+                        <td class="text-center text-success fw-bold">Incluido</td>
+                        <td class="text-center text-success fw-bold">Incluido</td>
+                        <td class="text-center text-success fw-bold">Incluido</td>
+                        <td class="text-center text-success fw-bold">Incluido</td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4" data-bs-toggle="tooltip" title="Traslado desde/hacia aeropuerto">Traslados Aeropuerto</td>
+                        <td class="text-center price">$45</td>
+                        <td class="text-center price">$50</td>
+                        <td class="text-center price">$40</td>
+                        <td class="text-center price">$42</td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4" data-bs-toggle="tooltip" title="Transporte público ilimitado 7 días">Pass Transporte (7 días)</td>
+                        <td class="text-center price">$35</td>
+                        <td class="text-center price">$40</td>
+                        <td class="text-center price">$30</td>
+                        <td class="text-center price">$32</td>
+                    </tr>
+
+                    <!-- ALOJAMIENTO -->
+                    <tr class="table-light">
+                        <td colspan="5" class="fw-bold ps-4 text-primary">🏨 Alojamiento (por noche)</td>
+                    </tr>
+                    <tr>
+                        <td class="ps-4" data-bs-toggle="tooltip" title="Hotel 3 estrellas céntrico">Hotel 3⭐</td>
+                        <td class="text-center price">$90</td>
+                        <td class="text-center price">$110</td>
+                        <td class="text-center price">$85</td>
+                        <td class="text-center price">$80</td>
+                    </tr>
+                    <!-- PAQUETES -->
+                    <tr class="table-light">
+                        <td colspan="5" class="fw-bold ps-4 text-primary">📦 Paquetes Todo Incluido (7 días)</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td class="ps-4" data-bs-toggle="tooltip" title="Incluye vuelo, hotel 3⭐, tours y comidas">
+                            <span class="badge bg-success me-2">Recomendado</span> Paquete Estándar
+                        </td>
+                        <td class="price-large">$899</td>
+                        <td class="price-large">$999</td>
+                        <td class="price-large">$799</td>
+                        <td class="price-large">$749</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td class="ps-4" data-bs-toggle="tooltip" title="Incluye hotel 4⭐, tours premium y todas las comidas">
+                            <span class="badge bg-primary me-2">Mejor Valor</span> Paquete Premium
+                        </td>
+                        <td class="price-large">$1,799</td>
+                        <td class="price-large">$1,999</td>
+                        <td class="price-large">$1,599</td>
+                        <td class="price-large">$1,499</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- LEYENDA Y NOTAS -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="note-card p-4 shadow-sm h-100">
+                    <h3 class="h5 text-primary mb-3">💡 Información Importante</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">✓ Precios en dólares USD por persona</li>
+                        <li class="mb-2">✓ Paquetes válidos para mínimo 2 personas</li>
+                        <li class="mb-2">✓ Descuentos para grupos de 6+ personas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="note-card p-4 shadow-sm h-100">
+                    <h3 class="h5 text-primary mb-3">🎁 Promociones Especiales</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">✓ 20% descuento en paquetes premium</li>
+                        <li class="mb-2">✓ Vuelo gratis al contratar hotel 4⭐</li>
+                        <li class="mb-2">✓ Seguro de viaje incluido en todos los paquetes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer class="text-white pt-5 pb-3" style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Newsletter</h4>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Ok</button>
+                    </form>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Síguenos</h4>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="text-white">
+                            <i class="bi bi-twitter-x fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Ubicación</h4>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1286.7600488755036!2d-65.29298531603578!3d-24.18901592913663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1776012588820!5m2!1ses-419!2sar"
+                            class="w-100 rounded border-0" height="150" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p>&copy; 2026 Viajes PySwing. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function() {
+            // Inicialización de Tooltips
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            [...tooltipTriggerList].forEach(el => new bootstrap.Tooltip(el));
+
+            // Lógica de Modo Oscuro
+            const $body = $('body');
+            const $toggle = $('#dark-mode-toggle');
+            
+            const setTheme = (isDark) => {
+                $body.toggleClass('dark-mode', isDark);
+                localStorage.setItem('darkMode', isDark);
+            };
+
+            // Cargar preferencia
+            if (localStorage.getItem('darkMode') === 'true') setTheme(true);
+
+            $toggle.on('click', () => setTheme(!$body.hasClass('dark-mode')));
+
+            // Script de sanitización global
+            $('input, textarea').on('input', function() {
+                const maliciousPattern = /[<>"'/\\&;]/g;
+                const originalValue = $(this).val();
+                const sanitizedValue = originalValue.replace(maliciousPattern, '');
+                
+                if (originalValue !== sanitizedValue) {
+                    $(this).val(sanitizedValue);
+                    $(this).addClass('is-sanitizing input-sanitized-flash');
+                    setTimeout(() => $(this).removeClass('is-sanitizing input-sanitized-flash'), 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

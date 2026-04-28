@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Agencias - Perfiles Interactivos</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/agencias.css">
+</head>
+<body>
+
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Viajes PySwing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destinos.html">Todos los destinos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="destinos.html">Europa</a></li>
+                            <li><a class="dropdown-item" href="destinos.html">América</a></li>
+                            <li><a class="dropdown-item" href="destinos.html">Asia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="agencias.html">Agencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="blog.html" class="btn btn-primary btn-sm rounded-pill px-3">📰 Blog</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button id="dark-mode-toggle" class="btn btn-outline-light btn-sm rounded-circle">🌓</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary">Nuestras Agencias</h1>
+            <p class="lead text-muted">Explora nuestras sucursales en las principales ciudades de España</p>
+        </header>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+            <!-- Tarjeta Madrid -->
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Frente -->
+                        <div class="flip-card-front p-4 shadow rounded-3">
+                            <div class="h3 fw-bold mb-3">Madrid</div>
+                            <div class="agencia-icon">🏙️</div>
+                            <p class="fst-italic opacity-75">Agencia Principal</p>
+                        </div>
+                        <!-- Atrás -->
+                        <div class="flip-card-back p-4 shadow rounded-3">
+                            <h3 class="h4 fw-bold">Madrid</h3>
+                            <div class="rating-stars">
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                            </div>
+                            <div class="servicios w-100">
+                                <h4 class="h6 fw-bold mb-2 text-center text-uppercase border-bottom pb-2">Servicios:</h4>
+                                <ul class="list-unstyled mb-0 text-center">
+                                    <li>✓ Reservas</li>
+                                    <li>✓ Asistencia 24/7</li>
+                                    <li>✓ Seguros</li>
+                                    <li>✓ Traslados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Barcelona -->
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-4 shadow rounded-3">
+                            <div class="h3 fw-bold mb-3">Barcelona</div>
+                            <div class="agencia-icon">🗼</div>
+                            <p class="fst-italic opacity-75">Agencia Metropolitana</p>
+                        </div>
+                        <div class="flip-card-back p-4 shadow rounded-3">
+                            <h3 class="h4 fw-bold">Barcelona</h3>
+                            <div class="rating-stars">
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="servicios w-100">
+                                <h4 class="h6 fw-bold mb-2 text-center text-uppercase border-bottom pb-2">Servicios:</h4>
+                                <ul class="list-unstyled mb-0 text-center">
+                                    <li>✓ Reservas</li>
+                                    <li>✓ Asistencia 24/7</li>
+                                    <li>✓ Seguros</li>
+                                    <li>✓ Traslados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Valencia -->
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-4 shadow rounded-3">
+                            <div class="h3 fw-bold mb-3">Valencia</div>
+                            <div class="agencia-icon">🌊</div>
+                            <p class="fst-italic opacity-75">Agencia Costera</p>
+                        </div>
+                        <div class="flip-card-back p-4 shadow rounded-3">
+                            <h3 class="h4 fw-bold">Valencia</h3>
+                            <div class="rating-stars">
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                            </div>
+                            <div class="servicios w-100">
+                                <h4 class="h6 fw-bold mb-2 text-center text-uppercase border-bottom pb-2">Servicios:</h4>
+                                <ul class="list-unstyled mb-0 text-center">
+                                    <li>✓ Reservas</li>
+                                    <li>✓ Asistencia 24/7</li>
+                                    <li>✓ Seguros</li>
+                                    <li>✓ Traslados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Sevilla -->
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-4 shadow rounded-3">
+                            <div class="h3 fw-bold mb-3">Sevilla</div>
+                            <div class="agencia-icon">🎭</div>
+                            <p class="fst-italic opacity-75">Agencia Cultural</p>
+                        </div>
+                        <div class="flip-card-back p-4 shadow rounded-3">
+                            <h3 class="h4 fw-bold">Sevilla</h3>
+                            <div class="rating-stars">
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                            </div>
+                            <div class="servicios w-100">
+                                <h4 class="h6 fw-bold mb-2 text-center text-uppercase border-bottom pb-2">Servicios:</h4>
+                                <ul class="list-unstyled mb-0 text-center">
+                                    <li>✓ Reservas</li>
+                                    <li>✓ Asistencia 24/7</li>
+                                    <li>✓ Seguros</li>
+                                    <li>✓ Traslados</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer class="text-white pt-5 pb-3" style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Newsletter</h4>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Ok</button>
+                    </form>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Síguenos</h4>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="text-white">
+                            <i class="bi bi-twitter-x fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Ubicación</h4>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1286.7600488755036!2d-65.29298531603578!3d-24.18901592913663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1776012588820!5m2!1ses-419!2sar"
+                            class="w-100 rounded border-0" height="150" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p>&copy; 2026 Viajes PySwing. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // 1. Cards con efecto flip (jQuery toggle al hacer clic)
+            $('.flip-card').on('click', function() {
+                $(this).find('.flip-card-inner').toggleClass('is-flipped');
+            });
+
+            // 2. Sistema de rating con estrellas (jQuery interactivo)
+            $('.star').on('click', function(e) {
+                e.stopPropagation(); // Evita que la tarjeta gire al calificar
+                const stars = $(this).parent().find('.star');
+                const index = stars.index(this);
+                
+                stars.removeClass('active');
+                stars.slice(0, index + 1).addClass('active');
+            });
+
+            // Script de sanitización global
+            $('input, textarea').on('input', function() {
+                const maliciousPattern = /[<>"'/\\&;]/g;
+                const originalValue = $(this).val();
+                const sanitizedValue = originalValue.replace(maliciousPattern, '');
+                
+                if (originalValue !== sanitizedValue) {
+                    $(this).val(sanitizedValue);
+                    $(this).addClass('is-sanitizing input-sanitized-flash');
+                    setTimeout(() => $(this).removeClass('is-sanitizing input-sanitized-flash'), 500);
+                }
+            });
+
+            // Modo Oscuro
+            $('#dark-mode-toggle').on('click', function() {
+                $('body').toggleClass('dark-mode');
+                localStorage.setItem('darkMode', $('body').hasClass('dark-mode'));
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Destinos - Revista PySwing</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Viajes PySwing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="destinos.html">Todos los destinos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="destinos.html">Europa</a></li>
+                            <li><a class="dropdown-item" href="destinos.html">América</a></li>
+                            <li><a class="dropdown-item" href="destinos.html">Asia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="agencias.html">Agencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="blog.html" class="btn btn-primary btn-sm rounded-pill px-3 active">📰 Blog</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button id="dark-mode-toggle" class="btn btn-outline-light btn-sm rounded-circle">🌓</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <!-- HERO SECTION -->
+        <div class="blog-hero mb-5 p-5 text-white rounded-4 shadow">
+            <h1 class="display-3 fw-bold">Blog de Destinos</h1>
+            <p class="lead">Historias, tips y experiencias de viajeros alrededor del mundo</p>
+        </div>
+
+        <!-- FILTROS DE CATEGORÍAS -->
+        <div class="text-center mb-5">
+            <h3 class="h5 mb-3 text-secondary text-uppercase fw-bold">Filtrar por categoría</h3>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="europa">Europa</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="america">América</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="asia">Asia</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="aventura">Aventura</button>
+            </div>
+        </div>
+
+        <!-- ARTÍCULOS EN GRID -->
+        <div class="articles-grid">
+            
+            <!-- ARTÍCULO 1 - DESTACADO -->
+            <article class="article filter-item" data-category="europa">
+                <div class="article-image">
+                    <img src="img/Barcelona.jpg" alt="Sagrada Familia, Barcelona">
+                    <span class="featured-badge">Destacado</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Europa</span>
+                        <span class="date">14 Abr 2026</span>
+                    </div>
+                    <h2>Rincones mágicos de Barcelona</h2>
+                    <p>Descubre los lugares secretos que los turistas no conocen. Desde la Sagrada Familia hasta las playas de Barceloneta, una guía completa para vivir Barcelona como local.</p>
+                    <div class="article-tags">
+                        <span class="tag">Playas</span>
+                        <span class="tag">Arquitectura</span>
+                        <span class="tag">Gastronomía</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 2 -->
+            <article class="article filter-item" data-category="asia">
+                <div class="article-image">
+                    <img src="img/tailandia.jpg" alt="Templo de Tailandia">
+                    <span class="article-badge">Nuevo</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Asia</span>
+                        <span class="date">12 Abr 2026</span>
+                    </div>
+                    <h3>Templos de Tailandia: espiritualidad y tradición</h3>
+                    <p>Un viaje espiritual por los templos budistas más hermosos de Bangkok y Chiang Mai. Aprende sobre la cultura local y sus tradiciones milenarias.</p>
+                    <div class="article-tags">
+                        <span class="tag">Cultura</span>
+                        <span class="tag">Templos</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 3 -->
+            <article class="article filter-item" data-category="america">
+                <div class="article-image">
+                    <img src="img/machupichu.jpg" alt="Machu Picchu, Perú">
+                    <span class="article-badge">Popular</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">América</span>
+                        <span class="date">10 Abr 2026</span>
+                    </div>
+                    <h3>Machu Picchu: La maravilla inca</h3>
+                    <p>Conoce la ciudadela perdida en los Andes. Consejos prácticos para tu visita, mejores épocas y experiencias inolvidables en Perú.</p>
+                    <div class="article-tags">
+                        <span class="tag">Patrimonio</span>
+                        <span class="tag">Aventura</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 4 -->
+            <article class="article filter-item" data-category="aventura">
+                <div class="article-image">
+                    <img src="img/barrera coral.jpg" alt="Buceo en la Gran Barrera de Coral">
+                    <span class="article-badge">Top</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Aventura</span>
+                        <span class="date">08 Abr 2026</span>
+                    </div>
+                    <h3>Buceo en la Gran Barrera de Coral</h3>
+                    <p>Sumérgete en las aguas cristalinas y descubre la biodiversidad marina más espectacular del planeta. Guía completa de buceo en Australia.</p>
+                    <div class="article-tags">
+                        <span class="tag">Buceo</span>
+                        <span class="tag">Naturaleza</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 5 -->
+            <article class="article filter-item" data-category="europa">
+                <div class="article-image">
+                    <img src="img/amsterdam.jpg" alt="Canales de Ámsterdam">
+                    <span class="article-badge">Recomendado</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Europa</span>
+                        <span class="date">06 Abr 2026</span>
+                    </div>
+                    <h3>Paseo por las calles de Ámsterdam</h3>
+                    <p>Los canales más románticos, los museos imprescindibles y la vida nocturna vibrante de la capital de Holanda. Todo lo que necesitas saber.</p>
+                    <div class="article-tags">
+                        <span class="tag">Romántico</span>
+                        <span class="tag">Museos</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 6 -->
+            <article class="article filter-item" data-category="asia">
+                <div class="article-image">
+                    <img src="img/japon.jpg" alt="Tokio, Japón">
+                    <span class="article-badge">Cultural</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Asia</span>
+                        <span class="date">04 Abr 2026</span>
+                    </div>
+                    <h3>Japón: tradición y modernidad</h3>
+                    <p>De los antiguos templos de Kioto al neón de Tokio. Experimenta la fusión perfecta entre lo antiguo y lo nuevo en el país del sol naciente.</p>
+                    <div class="article-tags">
+                        <span class="tag">Tradición</span>
+                        <span class="tag">Modernidad</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 7 -->
+            <article class="article filter-item" data-category="aventura">
+                <div class="article-image">
+                    <img src="img/Alpes Suizos.jpg" alt="Alpes Suizos">
+                    <span class="article-badge">Aventura</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Aventura</span>
+                        <span class="date">02 Abr 2026</span>
+                    </div>
+                    <h3>Senderismo en los Alpes Suizos</h3>
+                    <p>Rutas espectaculares entre montañas nevadas, pueblos enchantados y vistas panorámicas que te dejarán sin aliento. Guía de trekking completa.</p>
+                    <div class="article-tags">
+                        <span class="tag">Montaña</span>
+                        <span class="tag">Naturaleza</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 8 -->
+            <article class="article filter-item" data-category="america">
+                <div class="article-image">
+                    <img src="img/Caraibes.jpg" alt="Playas del Caribe">
+                    <span class="article-badge">Playas</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">América</span>
+                        <span class="date">31 Mar 2026</span>
+                    </div>
+                    <h3>Caraibes: Paraíso tropical</h3>
+                    <p>Arenas blancas, aguas turquesas y atardeceres de ensueño. Descubre las mejores playas del Caribe y sus secretos locales.</p>
+                    <div class="article-tags">
+                        <span class="tag">Playas</span>
+                        <span class="tag">Tropical</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTÍCULO 9 -->
+            <article class="article filter-item" data-category="europa">
+                <div class="article-image">
+                    <img src="img/Roma.jpg" alt="Coliseo de Roma">
+                    <span class="article-badge">Historia</span>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="category-tag">Europa</span>
+                        <span class="date">29 Mar 2026</span>
+                    </div>
+                    <h3>Roma: La ciudad eterna</h3>
+                    <p>Camina entre ruinas históricas, visita el Coliseo, la Capilla Sixtina y disfruta de la auténtica gastronomía romana en sus pasajes antiguos.</p>
+                    <div class="article-tags">
+                        <span class="tag">Historia</span>
+                        <span class="tag">Patrimonio</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- SECCIÓN DE COMENTARIOS DE ARTÍCULO DESTACADO -->
+        <section class="comments-section mt-5 p-4 bg-white rounded-4 shadow-sm">
+            <h2>Comentarios</h2>
+            <div class="comments-list">
+                
+                <!-- COMENTARIO 1 -->
+                <div class="comment">
+                    <div class="comment-avatar avatar-1"></div>
+                    <div class="comment-body">
+                        <div class="comment-header">
+                            <h4>Juan García</h4>
+                            <span class="comment-date">hace 2 días</span>
+                        </div>
+                        <p>¡Excelente artículo! Barcelona es increíble. Si alguien va, no se pierda la Sagrada Familia. Imprescindible.</p>
+                        <div class="comment-actions">
+                            <span class="like">👍 12</span>
+                            <span class="reply">Responder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMENTARIO 2 -->
+                <div class="comment">
+                    <div class="comment-avatar avatar-2"></div>
+                    <div class="comment-body">
+                        <div class="comment-header">
+                            <h4>María López</h4>
+                            <span class="comment-date">hace 1 día</span>
+                        </div>
+                        <p>Fui gracias a tus recomendaciones y no me arrepiento. El parc guell es muy hermoso. Gracias por los tips.</p>
+                        <div class="comment-actions">
+                            <span class="like">👍 8</span>
+                            <span class="reply">Responder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMENTARIO 3 -->
+                <div class="comment">
+                    <div class="comment-avatar avatar-3"></div>
+                    <div class="comment-body">
+                        <div class="comment-header">
+                            <h4>Carlos Ruiz</h4>
+                            <span class="comment-date">hace 12 horas</span>
+                        </div>
+                        <p>Planificando mi próximo viaje a España. Este artículo me ha dejado muchas ganas de visitar Barcelona. ¿Cuántos días recomiendan?</p>
+                        <div class="comment-actions">
+                            <span class="like">👍 5</span>
+                            <span class="reply">Responder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMENTARIO 4 -->
+                <div class="comment">
+                    <div class="comment-avatar avatar-4"></div>
+                    <div class="comment-body">
+                        <div class="comment-header">
+                            <h4>Sofia Martínez</h4>
+                            <span class="comment-date">hace 5 horas</span>
+                        </div>
+                        <p>Los avatares de las animaciones son increíbles. Este blog tiene un estilo magazine que me encanta. Felicidades.</p>
+                        <div class="comment-actions">
+                            <span class="like">👍 15</span>
+                            <span class="reply">Responder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUSCRIPCIÓN -->
+        <section class="newsletter-section mt-5 p-5 text-center text-white rounded-4 shadow">
+            <h2 class="fw-bold">Suscríbete a nuestro blog</h2>
+            <p class="mb-4">Recibe artículos, tips y experiencias de viaje cada semana</p>
+            <form class="newsletter-form d-flex gap-2 max-width-500 mx-auto justify-content-center flex-wrap">
+                <input type="email" class="form-control w-auto" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn btn-light fw-bold text-primary px-4">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer class="text-white pt-5 pb-3" style="background-color: var(--footer-bg);">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Newsletter</h4>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Tu email" required>
+                        <button type="submit" class="btn btn-primary">Ok</button>
+                    </form>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Síguenos</h4>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/" target="_blank" class="text-white">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="text-white">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="text-white">
+                            <i class="bi bi-twitter-x fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="h5 fw-bold mb-4" style="color: var(--primary-color);">Ubicación</h4>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1286.7600488755036!2d-65.29298531603578!3d-24.18901592913663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1776012588820!5m2!1ses-419!2sar"
+                            class="w-100 rounded border-0" height="150" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p>&copy; 2026 Viajes PySwing. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function() {
+            // 1. Filtrado de Categorías con jQuery
+            $('.filter-btn').on('click', function() {
+                const filter = $(this).data('filter');
+                
+                // Actualizar UI de botones
+                $('.filter-btn').removeClass('active btn-primary').addClass('btn-outline-primary');
+                $(this).addClass('active btn-primary').removeClass('btn-outline-primary');
+
+                if (filter === 'all') {
+                    $('.filter-item').fadeIn(400);
+                } else {
+                    $('.filter-item').hide();
+                    $('.filter-item[data-category="' + filter + '"]').fadeIn(400);
+                }
+            });
+
+            // 2. Lógica de Modo Oscuro Consolidada
+            const $body = $('body');
+            const $toggle = $('#dark-mode-toggle');
+            
+            const setTheme = (isDark) => {
+                $body.toggleClass('dark-mode', isDark);
+                localStorage.setItem('darkMode', isDark);
+            };
+
+            // Cargar preferencia
+            if (localStorage.getItem('darkMode') === 'true') setTheme(true);
+
+            $toggle.on('click', () => setTheme(!$body.hasClass('dark-mode')));
+
+            // 3. Simulación de envío de Newsletter
+            $('.newsletter-form').on('submit', function(e) {
+                e.preventDefault();
+                alert('¡Gracias por suscribirte! Pronto recibirás nuestras novedades.');
+                this.reset();
+            });
+
+            // Script de sanitización para los formularios del blog
+            $('input, textarea').on('input', function() {
+                const maliciousPattern = /[<>"'/\\&;]/g;
+                const originalValue = $(this).val();
+                const sanitizedValue = originalValue.replace(maliciousPattern, '');
+                
+                if (originalValue !== sanitizedValue) {
+                    $(this).val(sanitizedValue);
+                    $(this).addClass('is-sanitizing input-sanitized-flash');
+                    setTimeout(() => $(this).removeClass('is-sanitizing input-sanitized-flash'), 500);
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
